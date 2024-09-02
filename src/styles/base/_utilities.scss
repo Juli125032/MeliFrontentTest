@@ -1,0 +1,44 @@
+.regular-padding{
+    padding: 2rem 4rem;
+
+    @media (max-width: 768px){
+        padding: 2rem 2rem;
+    }
+}
+
+.extra-padding{
+    padding: 4rem 4rem 2rem 4rem;
+
+    @media (max-width: 768px){
+        padding: 4rem 2rem 2rem 2rem;
+
+    }
+}
+
+.p1{
+    padding: 1rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.u-mx{
+    margin: auto 1rem;
+}
+
+.u-my{
+    margin: 1rem auto;
+}
+
+.u-my-6{
+    margin: 2.5rem auto;
+}
+
+.u-uppercase{
+    text-transform: uppercase;
+}
+
+.u-dtable{
+    display: table-cell;
+}

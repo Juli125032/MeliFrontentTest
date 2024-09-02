@@ -1,0 +1,68 @@
+.product-card {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid $product-border-color;
+  justify-content: space-between;
+  background-color: $color-white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  .product-container{
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
+  }
+
+  .product-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+
+  .product-info {
+    flex: 1;
+
+    .product-price {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: $price-color;
+      margin-bottom: 1rem;
+
+      .price-amount {
+        margin-right: 10px;
+      }
+
+      .free-shipping-icon {
+        background: $free-shipping-color;
+        font-size: 18px;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+
+        img{
+            max-width: 100%;
+        }
+      }
+    }
+
+    .product-title {
+      font-size: 18px;
+      color: $product-title-color;
+      margin-bottom: 5px;
+    }
+  }
+
+  .product-location {
+    font-size: 14px;
+    padding: 2rem;
+    color: $product-location-color;
+  }
+}

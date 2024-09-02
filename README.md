@@ -1,70 +1,113 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mercado Libre Test
 
-## Available Scripts
+Este proyecto es una implementación de un buscador de productos utilizando React en el frontend y Express en el backend. Permite a los usuarios buscar productos, ver los detalles de un producto específico y navegar por las categorías a través de un breadcrumb.
 
-In the project directory, you can run:
+## Tabla de Contenidos
 
-### `npm start`
+- [Características](#características)
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Ejecución](#ejecución)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [API](#api)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Características
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Búsqueda de productos utilizando la API de Mercado Libre.
+- Visualización de resultados de búsqueda con precios formateados.
+- Breadcrumb dinámico basado en las categorías del producto.
+- Detalles del producto con imagen, descripción, y precio.
+- Navegación interna entre las vistas de búsqueda y detalle.
+- Manejo de envío gratuito y condiciones del producto.
 
-### `npm test`
+## Requisitos Previos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v18.x o superior)
+- npm (v6.x o superior) o Yarn
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona este repositorio:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/tu-usuario/mercado-libre-test.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navega al directorio del proyecto:
 
-### `npm run eject`
+   ```bash
+   cd mercado-libre-test
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Instala las dependencias del proyecto para el frontend y el backend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   # Para el frontend
+   cd client
+   npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   # Para el backend
+   cd ../server
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ejecución
 
-## Learn More
+Para ejecutar el proyecto en un entorno de desarrollo, sigue estos pasos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Iniciar el servidor backend**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd server
+   npm run dev
+   ```
 
-### Code Splitting
+   Esto iniciará el servidor Express en `http://localhost:3001`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Iniciar el frontend**:
 
-### Analyzing the Bundle Size
+   En una nueva terminal, inicia la aplicación React:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd client
+   npm start
+   ```
 
-### Making a Progressive Web App
+   Esto iniciará la aplicación React en `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Estructura del Proyecto
 
-### Advanced Configuration
+```plaintext
+mercado-libre-test/
+├── client/                  # Código del frontend (React)
+│   ├── public/              # Archivos públicos
+│   ├── src/                 # Código fuente
+│   └── package.json         # Dependencias y scripts del frontend
+├── server/                  # Código del backend (Express)
+│   ├── routes/              # Rutas de la API
+│   ├── controllers/         # Controladores de la lógica de negocio
+│   └── package.json         # Dependencias y scripts del backend
+└── README.md                # Documentación del proyecto
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## API
 
-### Deployment
+### Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **`GET /api/items?q=:query`**: Busca productos en la API de Mercado Libre y devuelve los resultados formateados.
+- **`GET /api/items/:id`**: Obtiene los detalles de un producto específico incluyendo la descripción.
 
-### `npm run build` fails to minify
+## Tecnologías Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Frontend**:
+  - React
+  - React Router
+  - SASS
+  - Axios
+
+- **Backend**:
+  - Node.js
+  - Express
+  - Axios (para llamadas a la API de Mercado Libre)

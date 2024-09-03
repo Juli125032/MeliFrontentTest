@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getItemDetails } from '../../services/api';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Loader from '../../components/Loader';
+import { NotFound } from '../../components/NotFound';
 
 function ProductDetailPage() {
   const { id } = useParams();
@@ -54,7 +55,7 @@ function ProductDetailPage() {
         {product?.categories?.length > 0 && (
           <Breadcrumbs categories={product.categories} />
         )}
-        {product ? renderProduct() : <div>No se encontró el producto.</div>}
+        {product ? renderProduct() : <NotFound></NotFound>}
         </>
       )}
     </div>

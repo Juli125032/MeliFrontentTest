@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import truck from '../assets/images/camion.png'
+import truck from '../../../../assets/images/camion.png'
 
 function Item({ product }) {
   const { price, id } = product;

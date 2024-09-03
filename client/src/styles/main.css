@@ -40,10 +40,10 @@ body {
   }
 }
 @keyframes rotation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -75,6 +75,10 @@ body {
 
 .mb-1 {
   margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
 
 .u-mx {
@@ -172,65 +176,17 @@ body {
   align-items: center;
 }
 
-.product-card {
-  display: flex;
-  padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
-  justify-content: space-between;
-  background-color: #FFF;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-.product-card .product-container {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .product-card .product-container {
-    flex-direction: column;
-  }
-}
-.product-card .product-image {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 15px;
-}
-.product-card .product-info {
-  flex: 1;
-}
-.product-card .product-info .product-price {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-}
-.product-card .product-info .product-price .price-amount {
-  margin-right: 10px;
-}
-.product-card .product-info .product-price .free-shipping-icon {
-  background: green;
-  font-size: 18px;
-  padding: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-}
-.product-card .product-info .product-price .free-shipping-icon img {
-  max-width: 100%;
-}
-.product-card .product-info .product-title {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 5px;
-}
-.product-card .product-location {
+.breadcrumb {
   font-size: 14px;
-  padding: 2rem;
-  color: #999;
+  padding: 1rem;
+  color: #69696F;
+}
+.breadcrumb span:not(:last-child):after {
+  content: ">";
+  margin: 0.3rem;
+}
+.breadcrumb span:last-child {
+  font-weight: 600;
 }
 
 .search-box {
@@ -314,21 +270,34 @@ body {
   border-color: #2980b9;
 }
 
-.breadcrumb {
-  font-size: 14px;
-  padding: 1rem;
-  color: #69696F;
-}
-.breadcrumb span:not(:last-child):after {
-  content: ">";
-  margin: 0.3rem;
-}
-.breadcrumb span:last-child {
-  font-weight: 600;
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  animation: rotation 1s linear infinite;
+  display: block;
+  margin: 1rem auto;
 }
 
-.items-container {
-  background-color: #FFF;
+.empty {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.empty img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 200px;
+}
+.empty p {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .product-detail {
@@ -397,6 +366,71 @@ body {
 .product-detail .button {
   margin: 2rem auto 0 auto;
   width: 90%;
+}
+
+.product-card {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: space-between;
+  background-color: #FFF;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.product-card .product-container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .product-card .product-container {
+    flex-direction: column;
+  }
+}
+.product-card .product-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.product-card .product-info {
+  flex: 1;
+}
+.product-card .product-info .product-price {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.product-card .product-info .product-price .price-amount {
+  margin-right: 10px;
+}
+.product-card .product-info .product-price .free-shipping-icon {
+  background: green;
+  font-size: 18px;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.product-card .product-info .product-price .free-shipping-icon img {
+  max-width: 100%;
+}
+.product-card .product-info .product-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.product-card .product-location {
+  font-size: 14px;
+  padding: 2rem;
+  color: #999;
+}
+
+.items-container {
+  background-color: #FFF;
 }
 
 body {

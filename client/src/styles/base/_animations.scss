@@ -11,10 +11,12 @@
 }
 
 @keyframes rotation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
+

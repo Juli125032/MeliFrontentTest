@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/logo.png';
-import lupa from '../assets/images/lupa.png';
+import logo from '../../assets/images/logo.png';
+import lupa from '../../assets/images/lupa.png';
 
 function SearchBox() {
   const [searchTerm, setSearchTerm] = useState('');

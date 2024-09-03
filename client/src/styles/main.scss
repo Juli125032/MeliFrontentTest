@@ -8,12 +8,15 @@
 @import "base/utilities";
 
 @import "components/buttons";
-@import "components/productcard";
-@import "components/searchbox";
-@import "components/breadcrumb";
 
-@import "pages/items";
-@import "pages/productdetail";
+@import "../components/Breadcrumbs/Breadcrumb.scss";
+@import "../components/SearchBox/SearchBox.scss";
+@import "../components/Loader/Loader.scss";
+@import "../components/EmptyData/EmptyData.scss";
+
+@import "../pages/ProductDetailPage/ProductDetail.scss";
+@import "../pages/SearchResult/components/Item/Item.scss";
+
 
 body {
   font-size: 62.5%;

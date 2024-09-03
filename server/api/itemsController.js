@@ -2,9 +2,9 @@ const axios = require('axios');
 const API_BASE_URL = 'https://api.mercadolibre.com';
 
 exports.searchItems = async (req, res) => {
-    const { query } = req.query;
+    const { q } = req.query;
     try {
-        const response = await axios.get(`${API_BASE_URL}/sites/MLA/search?q=${query}`);
+        const response = await axios.get(`${API_BASE_URL}/sites/MLA/search?q=${q}`);
         const items = response.data.results.slice(0, 4).map(item => ({
             id: item.id,
             title: item.title,

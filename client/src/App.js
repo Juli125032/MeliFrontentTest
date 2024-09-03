@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SearchResultsPage from './pages/SearchResultsPage';
+import SearchResultsPage from './pages/SearchResult';
 import ProductDetailPage from './pages/ProductDetailPage';
-import Layout from './components/Layout';
+import Layout from './components/Layout/index';
 
 function App() {
   return (
